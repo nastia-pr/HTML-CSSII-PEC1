@@ -1,57 +1,163 @@
+%align_center {
+  display: flex;
+  align-items: center;
+}
+
 * {
   box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-}
-
-.uoc-title {
+  padding: 0;
   font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
+}
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+//Navbar Section
+
+.navbar {
+  background: $beige;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1200px) /2);
+  z-index: 10;
+  position: relative;
+
+  &_logo {
+    color: $dark;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-left: 24px;
+    @extend %align_center;
+  }
+
+  &_bars {
+    opacity: 0;
+    @include tablet {
+      color: $dark;
+      opacity: 1;
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-size: 1rem;
+    }
+  }
+
+  &_menu {
+    @extend %align_center;
+    list-style: none;
+    text-align: center;
+    margin-right: 24px;
+
+    @include tablet {
+      display: none;
+    }
+
+    &_links {
+      color: $dark;
+      @extend %align_center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 0 1rem;
+
+      &:hover {
+        color: $red;
+        transition: all 0.3s ease;
+      }
+    }
+
+    #button {
+      padding: 12px 24px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      background: $red;
+      margin-left: 16px;
+      color: $beige;
+
+      &:hover {
+        background: $lime;
+        transition: all 0.3s ease;
+      }
+    }
   }
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+//Hero Section
+
+.hero {
+  background-color: $light;
+
+  &_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    height: 100vh;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+      height: 100%;
+    }
+
+    &_left {
+      width: 100%;
+      line-height: 1.2;
+      margin-right: 30px;
+
+      @include tablet {
+        padding: 5rem 0;
+      }
+
+      @include mobile {
+        line-height: 1.5;
+      }
+    }
+
+    &_left h1 {
+      font-size: 4rem;
+      color: $blue;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &_left h2 {
+      font-size: 3rem;
+      margin-top: 1rem;
+      color: $red;
+
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+
+    &_left p {
+      font-size: 2rem;
+      color: $red;
+      margin-top: 1.5rem;
+      font-weight: 700;
+
+      @include mobile {
+        font-size: 1.5rem;
+      }
+    }
+
+    &_right {
+      text-align: center;
+    }
+
+    &_img {
+      height: 100%;
+      width: 100%;
+    }
+    
+  }
 }
+

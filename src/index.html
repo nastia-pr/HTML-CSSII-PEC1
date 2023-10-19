@@ -7,36 +7,44 @@
         <link
             rel="stylesheet"
             type="text/css"
-            href="./assets/styles/main.scss"
+            href="./assets/styles/main.css"
         />
-        <!-- do not remove this line! -->
-        <title>UOC Boilerplate</title>
+        <title>Nombre de la actividad</title>
     </head>
     <body>
-        <div class="uoc-container">
-            <picture>
-                <source
-                    srcset="./assets/images/logo.png?as=webp&width=350"
-                    type="image/webp"
-                />
-                <img
-                    src="./assets/images/logo.png?width=350"
-                    alt="Universitat Oberta de Catalunya"
-                    class="uoc-logo"
-                />
-            </picture>
-            <h1 class="uoc-title">
-                Hello, UOC! <i class="fas fa-university"></i>
-            </h1>
-            <p>
-                This is a starter template for the Advanced HTML and CSS Tools
-                courses from the Master's Program in Multimedia Applications and
-                the Master's Program in Web App and Website Development at the
-                Universitat Oberta de Catalunya.
-            </p>
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <a href="#" class="navbar_logo">CERÁMICA</a>
+            <div class="navbar_bars">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar_menu">
+                <a href="#" class="navbar_menu_links">Inicio</a>
+                <a href="#" class="navbar_menu_links">Sobre</a>
+                <a href="#" class="navbar_menu_links">Home</a>
+                <a href="#" class="navbar_menu_links" id="button">Home</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero_container">
+                <div class="hero_container_left">
+                    <h1>Descubre la cerámica</h1>
+                    <h2>Todo lo que necesitas saber para empezar</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Illo doloribus perferendis.
+                    </p>
+                </div>
+                <div class="hero_container_right">
+                    <img
+                        src="./assets/images/pottery.jpg"
+                        alt="figura de cerámica"
+                        class="hero_container_img"
+                    />
+                </div>
+            </div>
         </div>
-        <include src="./views/footer.html"></include>
-        <script type="module" src="./assets/scripts/main.js"></script>
-        <!-- do not remove this line! -->
     </body>
 </html>
