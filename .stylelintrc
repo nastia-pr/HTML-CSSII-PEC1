@@ -1,17 +1,6 @@
 {
  "extends": ["stylelint-config-recommended-scss"],
  "rules": {
-    "indentation": 2,
-    "order/order": ["custom-properties", "declarations"],
-    "color-format": "hex",
-    "max-nesting-depth": 3,
-    "selector-no-universal": true,
-    "media-query-list-comma-newline-after": "always-multi-line",
-    "declaration-block-trailing-semicolon": "always",
-    "string-quotes": "double",
-    "selector-no-id": true,
-    "function-whitespace-after": "always",
-    "property-no-vendor-prefix": true,
-    "declaration-block-no-duplicate-properties": true
+    
  }
 }
