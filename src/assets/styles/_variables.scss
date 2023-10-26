@@ -1,18 +1,15 @@
 @use "sass:color";
 
-$font-family-sans-serif: 'Open Sans', sans-serif;
 $font-family-serif: 'Young Serif', serif;
-
-$beige: #f9c48f;
-$light: #f7f2ee;
-$dark: #080806;
-$blue: #000263;
-$red: #9c0e11;
-$lime: #27b14c;
-$orange:rgb(241, 125, 0)c;
+$font-family-bodoni: 'Bodoni Moda', serif;
 
 
 
+$hover:#9fe7ff;
+$black: #000000;
+$white: #fff;
+$beige: rgba(255, 224, 178, 0.587);
+$footer: #36a2c8;
 
 
 $mqMinWidth: 420px;

@@ -10,7 +10,15 @@
  * Write any other JavaScript below
  */
 
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
+let toggleBtn = document.querySelector(".navbar_bars");
+let toggleBtnIcon = document.querySelector(".navbar_bars i");
+let dropDownMenu = document.querySelector(".dropdown_menu");
+
+toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle("open");
+    let isOpen = dropDownMenu.classList.contains("open");
+
+    toggleBtnIcon.classList = isOpen
+        ? "fa-solid fa-xmark"
+        : "fa-solid fa-bars";
+};
